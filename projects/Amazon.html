@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Case study of Amazon & Ulta PDP redesign project that increased sales by 327%">
+    <title>A+ Content Redesign for Amazon and Ulta</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../media.css">
+    <link rel="icon" href="../assets/favicon.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800;900;&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <a href="../index.html" class="logo">
+            <img src="../assets/logo.svg" alt="Logo" loading="lazy">
+        </a>
+        <a href="../assets/resume.pdf" class="resume-button" target="_blank">Resume</a>
+    </nav>
+
+    <main class="project-detail">
+        <!-- Hero Section -->
+        <section class="project-hero">
+            <div class="project-intro">
+                <h1>A+ Content Redesign for Amazon and Ulta</h1>
+                <div class="project-description">
+                    <p>The product detail page(PDP) is a crucial factor in determining consumer purchasing decisions. Previously, we used  A+ Content that didn't match the products, resulting in poor sales.</p>
+                    
+                    <p>To tackle this issue, I strategically redesigned the A+ content with a visually appealing banner with a clear concept, product shots, model shots, and how to. This comprehensive redesign led to a dramatic <span class="highlight"> 327% sales increase</span>, from $351 to $1,499 for the SKUs featuring the new A+ content.</p>
+                </div>
+                <div class="project-meta">
+                    <div class="meta-row">
+                        <span class="meta-label">Brand</span>
+                        <span class="meta-value">imPRESS</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Tool</span>
+                        <span class="meta-value">Photoshop | GA4</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Impact</span>
+                        <span class="meta-value">327% sales growth ($351 → $1,499)</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Role</span>
+                        <span class="meta-value list">
+                            <span>Strategic planning</span>
+                            <span>A+ Content design</span>
+                            <span>Sales data analysis</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Full Screen Image Carousel -->
+        <section class="fullscreen-carousel" id="projectCarousel">
+            <button class="carousel-arrow prev" type="button">&#10094;</button>
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <div class="carousel-slide">
+                        <img src="../assets/project01_slide01.png" alt="slide 01" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="../assets/project01_slide02.png" alt="slide 02" loading="lazy">
+                    </div>
+                </div>
+                <div class="carousel-indicators">
+                    <button class="indicator active" type="button"></button>
+                    <button class="indicator" type="button"></button>
+                </div>
+            </div>
+            <button class="carousel-arrow next" type="button">&#10095;</button>
+        </section>
+    </main>
+
+    <!-- 라이트박스 모달 -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <button class="close-lightbox" id="closeLightbox">&times;</button>
+        <div class="lightbox-content">
+            <img src="" alt="확대된 이미지" class="lightbox-image" id="lightboxImage">
+        </div>
+    </div>
+
+    <!-- Next Project Section -->
+    <section class="next-project">
+        <div class="next-project-container">
+            <div class="next-project-text">
+                <h2>Next project</h2>
+            </div>
+            <a href="Social.html" class="next-project-link">
+                <div class="next-project-thumbnail">
+                    <img src="../assets/project04-nextproject.png" alt="project04" loading="lazy">
+                </div>
+                <div class="next-project-info">
+                    <h3>Conversion Optimization</h3>
+                    <p>Managed email campaigns and IG designs for imPRESS, driving 33,237 likes and $250,352 in email sales.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- 외부 스크립트 사용 -->
+    <script src="../carousel.js"></script>
+    <script src="../app.js" defer></script>
+</body>
+</html> 

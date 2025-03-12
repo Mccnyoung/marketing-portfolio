@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Case study of Amazon & Ulta PDP redesign project that increased sales by 327%">
+    <title>Social Content Design for imPRESS</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../media.css">
+    <link rel="icon" href="../assets/favicon.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800;900;&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <a href="../index.html" class="logo">
+            <img src="../assets/logo.svg" alt="Logo" loading="lazy">
+        </a>
+        <a href="../assets/resume.pdf" class="resume-button" target="_blank">Resume</a>
+    </nav>
+
+    <main class="project-detail">
+        <!-- Hero Section -->
+        <section class="project-hero">
+            <div class="project-intro">
+                <h1>Social Content Design for imPRESS</h1>
+                <div class="project-description">
+                    <p>imPRESS captivated the Gen Z with its cute and trendy product, actively using illustration elements in its email and Instagram content designs. I designed 26.6% of the emails sent by imPRESS in 2022, which accounted for 37.2% of total email sales. Additionally, I created 12 nail chip posts for new product promotions, which garnered a total of 35,173 likes, driving high customer engagement.</p>
+                </div>
+                <div class="project-meta">
+                    <div class="meta-row">
+                        <span class="meta-label">Brand</span>
+                        <span class="meta-value">imPRESS</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Tool</span>
+                        <span class="meta-value">Photoshop | Illustrator | GA4</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Impact</span>
+                        <span class="meta-value list">
+                            <span>Email Total Order Value: $250,352</span>
+                            <span>Nail chip post total likes: 35,173</span>
+                        </span>                    
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Role</span>
+                        <span class="meta-value list">
+                            <span>Email design</span>
+                            <span>IG feed and story design</span>
+                            <span>IG nail chips design</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Full Screen Image Carousel -->
+        <section class="fullscreen-carousel" id="projectCarousel">
+            <button class="carousel-arrow prev" type="button">&#10094;</button>
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <div class="carousel-slide">
+                        <img src="../assets/project04_slide01.png" alt="slide 01" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="../assets/project04_slide02.png" alt="slide 02" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="../assets/project04_slide03.png" alt="slide 03" loading="lazy">
+                    </div>
+                </div>
+                <div class="carousel-indicators">
+                    <button class="indicator active" type="button"></button>
+                    <button class="indicator" type="button"></button>
+                    <button class="indicator" type="button"></button>
+                </div>
+            </div>
+            <button class="carousel-arrow next" type="button">&#10095;</button>
+        </section>
+    </main>
+
+    <!-- 라이트박스 모달 -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <button class="close-lightbox" id="closeLightbox">&times;</button>
+        <div class="lightbox-content">
+            <img src="" alt="확대된 이미지" class="lightbox-image" id="lightboxImage">
+        </div>
+    </div>
+
+    <!-- Next Project Section -->
+    <section class="next-project">
+        <div class="next-project-container">
+            <div class="next-project-text">
+                <h2>Next project</h2>
+            </div>
+            <a href="Pride.html" class="next-project-link">
+                <div class="next-project-thumbnail">
+                    <img src="../assets/project02_feed.png" alt="project02" loading="lazy">
+                </div>
+                <div class="next-project-info">
+                    <h3>Digital Campaign Experience</h3>
+                    <p>Launched Pride campaign landing page, generating $52,718 in sales</p>
+                </div>
+            </a>
+        </div>
+    </section>
+    <script src="../carousel.js"></script>
+    <script src="../app.js" defer></script>
+</body>
+</html> 

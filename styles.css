@@ -1,0 +1,657 @@
+/* Base Styles */
+:root {
+    --text-color: #000;
+    --bg-color: #fff;
+    --transition: all 0.3s ease;
+    --tiktok-black: #000000;
+    --tiktok-white: #ffffff;
+    --tiktok-pink: #fe2c55;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--tiktok-white);
+    color: var(--tiktok-black);
+    overflow-x: hidden;
+    transition: var(--transition);
+    padding-top: 80px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation */
+.nav {
+    position: fixed;
+    width: 100%;
+    padding: 1.3rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    background-color: var(--tiktok-black);
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: block;
+    width: 150px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.logo:hover {
+    transform: translateY(-2px);
+}
+
+.resume-button {
+    padding: 12px 16px;
+    border-radius: 100px;
+    border: 1px solid var(--tiktok-white);
+    color: var(--tiktok-white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.resume-button:hover {
+    background: var(--tiktok-white);
+    color: var(--tiktok-black);
+}
+
+/* Hamburger Menu - 모바일 메뉴용으로 남겨둠 */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--tiktok-white);
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: calc(100vh - 80px); /* nav 높이를 정확히 제외 */
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    padding: 0 4rem;
+    align-items: center;
+    max-width: 1800px;
+    margin: 0 auto;
+    background-color: var(--tiktok-pink);
+    overflow: visible;
+    margin-bottom: 0; /* 불필요한 여백 제거 */
+}
+
+.hero-text {
+    max-width: 900px;
+}
+
+.mega-text {
+    font-size: 6rem;
+    font-weight: 900;
+    line-height: 0.98;
+    margin-bottom: 2rem;
+    letter-spacing: -0.3rem;
+}
+
+.sub-text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: -0.04rem;
+}
+
+.hero-media {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone-frame {
+    position: relative;
+    width: 300px;
+    height: auto;
+    aspect-ratio: 9/16;
+    border-radius: 24px;
+    overflow: hidden;
+    background: var(--tiktok-black);
+}
+
+.phone-frame video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+/* Projects Section */
+.projects {
+    background-color: var(--tiktok-black);
+    width: 100%;
+}
+
+.project-header {
+    padding: 8rem clamp(2rem, 10vw, 20rem) 0;
+}
+
+.project-header h2 {
+    color: var(--tiktok-white);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.projects-container {
+    padding: 2rem clamp(2rem, 10vw, 20rem) 8rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #fff;
+    width: 100%;
+    height: auto;
+    text-decoration: none;
+    display: block;
+}
+
+.project-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.5s ease;
+    padding: 3rem;
+}
+
+.project-overlay h3 {
+    color: white;
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    transform: translateY(20px);
+    transition: transform 0.5s ease;
+    letter-spacing: -0.05em;
+}
+
+.project-overlay p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-bottom: 8rem;
+    transform: translateY(20px);
+    transition: transform 0.5s ease;
+}
+
+.view-project {
+    color: var(--tiktok-pink);
+    font-size: 1.2rem;
+    font-weight: 400;
+    transform: translateY(20px);
+    transition: transform 0.5s ease;
+}
+
+/* Hover Effects for Projects */
+.project-card:hover .project-image img {
+    filter: blur(2px) brightness(0.8);
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-card:hover .project-overlay h3,
+.project-card:hover .project-overlay p,
+.project-card:hover .view-project {
+    transform: translateY(0);
+}
+
+/* Project Detail Styles */
+.project-detail {
+    padding-top: 0;
+}
+
+.project-hero {
+    padding: 6rem clamp(2rem, 10vw, 20rem);
+    width: 100%;
+}
+
+.project-intro {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-intro h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+    letter-spacing: -0.02em;
+}
+
+.project-description {
+    margin-bottom: 4rem;
+}
+
+.project-description p {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    color: rgba(0, 0, 0, 0.7);
+    max-width: 1000px;
+    letter-spacing: -0.01em;
+}
+
+/* 새로운 방식으로 문단 사이 간격 추가 */
+.project-description p + p {
+    margin-top: 0.8rem;
+}
+
+.highlight {
+    color: var(--tiktok-pink);
+    font-weight: 600;
+}
+
+.project-meta {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    padding-top: 2rem;
+}
+
+.meta-row {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.meta-label {
+    width: 140px;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.meta-value {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.meta-value.list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.meta-value.list span {
+    position: relative;
+    padding-left: 1rem;
+}
+
+.meta-value.list span::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--text-color);
+}
+
+/* 서브 리스트 스타일 */
+.meta-value.list .sub-list {
+    margin-top: 0.3rem;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.meta-value.list .sub-list span {
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.meta-value.list .sub-list span::before {
+    content: "○";
+    left: 0;
+}
+
+/* Full Screen Carousel */
+.fullscreen-carousel {
+    width: 100%;
+    position: relative;
+    overflow: visible;
+    padding: 4rem clamp(2rem, 10vw, 20rem);
+}
+
+.carousel-container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: none;
+    margin-bottom: 40px;
+}
+
+.carousel-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    width: 100%;
+    flex: 0 0 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f8f8;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.8);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: none;
+    opacity: 0.9;
+}
+
+.carousel-arrow:hover {
+    background: rgba(0, 0, 0, 1);
+    opacity: 1;
+}
+
+.carousel-arrow.prev {
+    left: 60px;
+}
+
+.carousel-arrow.next {
+    right: 60px;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 1000;
+    padding: 16px 20px;
+    border-radius: 20px;
+    background: #d6d6d6;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: #7F7F7F;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: none;
+}
+
+.indicator.active {
+    background: black;
+    transform: scale(1.2);
+}
+
+/* Next Project Section */
+.next-project {
+    width: 100%;
+    background-color: var(--bg-color);
+    padding: 4rem clamp(2rem, 10vw, 20rem);
+    margin-top: 4rem;
+}
+
+.next-project-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.next-project-text h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+.next-project-link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--text-color);
+    flex: 1;
+    max-width: 600px;
+}
+
+.next-project-thumbnail {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.next-project-thumbnail:hover {
+    transform: scale(1.03);
+}
+
+.next-project-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.next-project-info {
+    margin-left: 0;
+}
+
+.next-project-info h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 0.2rem;
+}
+
+.next-project-info p {
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--tiktok-black);
+    padding: 2rem 4rem;
+    color: var(--tiktok-white);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left p {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.footer-right {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-right a {
+    color: var(--tiktok-white);
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.footer-right a:hover {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer-left {
+        display: none;
+    }
+
+    .footer-right {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Scroll Button */
+.scroll-button {
+    position: absolute;
+    bottom: 24px; /* 버튼이 hero 영역 안에 표시되도록 수정 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 48px;
+    height: 48px;
+    background-color: var(--tiktok-black);
+    color: var(--tiktok-white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+
+/* 라이트박스 모달 스타일 */
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10000;
+    padding: 2rem;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-modal.active {
+    display: flex;
+}
+
+.lightbox-content {
+    position: relative;
+    width: 90%;
+    max-width: 1500px;
+    height: auto;
+    max-height: 90vh;
+    text-align: center;
+}
+
+.lightbox-image {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.close-lightbox {
+    display: none; /* X 버튼 숨기기 */
+}

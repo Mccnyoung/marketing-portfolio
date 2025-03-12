@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Case study of Amazon & Ulta PDP redesign project that increased sales by 327%">
+    <title>Pride Campaign</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../media.css">
+    <link rel="icon" href="../assets/favicon.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800;900;&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <a href="../index.html" class="logo">
+            <img src="../assets/logo.svg" alt="Logo" loading="lazy">
+        </a>
+        <a href="../assets/resume.pdf" class="resume-button" target="_blank">Resume</a>
+    </nav>
+
+    <main class="project-detail">
+        <!-- Hero Section -->
+        <section class="project-hero">
+            <div class="project-intro">
+                <h1>Pride Campaign</h1>
+                <div class="project-description">
+                    <p>In celebration of Pride Month, Kiss Products launched the Pride Collection and collaborated with The Trevor Project, the LGBTQ+ nonprofit organization which works to prevent suicide among LGBTQ+ youth. Through this collaboration, KISS committed to donating $50,000, emphasizing the brand's social responsibility.</p>
+                    <p>The key visuals of the campaign featured the rainbow, the iconic color of Pride, in a gradient, while highlighting the donation to The Trevor Project to make it clear that consumer purchases would support a meaningful cause.</p>
+                    <p>Additionally, a mouse-over interaction was added to display information about the products worn by the model, encouraging immediate purchases. Through this strategic approach, <span class="highlight">total sales of $52,718</span> were achieved.</p>
+                </div>
+                <div class="project-meta">
+                    <div class="meta-row">
+                        <span class="meta-label">Brand</span>
+                        <span class="meta-value">KISS, imPRESS, FALSCARA</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Tool</span>
+                        <span class="meta-value">Figma | Photoshop</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Impact</span>
+                        <span class="meta-value">Sales $52,718</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Role</span>
+                        <span class="meta-value list">
+                            <span>Graphic, Interaction design</span>
+                            <span>Design handoff to developers</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Full Screen Image Carousel -->
+        <section class="fullscreen-carousel" id="projectCarousel">
+            <button class="carousel-arrow prev" type="button">&#10094;</button>
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <div class="carousel-slide">
+                        <img src="../assets/project02_slide01.png" alt="slide 01" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="../assets/project02_slide02.png" alt="slide 02" loading="lazy">
+                    </div>
+                </div>
+                <div class="carousel-indicators">
+                    <button class="indicator active" type="button"></button>
+                    <button class="indicator" type="button"></button>
+                </div>
+            </div>
+            <button class="carousel-arrow next" type="button">&#10095;</button>
+        </section>
+    </main>
+
+    <!-- 라이트박스 모달 -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <button class="close-lightbox" id="closeLightbox">&times;</button>
+        <div class="lightbox-content">
+            <img src="" alt="확대된 이미지" class="lightbox-image" id="lightboxImage">
+        </div>
+    </div>
+
+    <!-- Next Project Section -->
+    <section class="next-project">
+        <div class="next-project-container">
+            <div class="next-project-text">
+                <h2>Next project</h2>
+            </div>
+            <a href="Armani.html" class="next-project-link">
+                <div class="next-project-thumbnail">
+                    <img src="../assets/project03_feed.png" alt="project03" loading="lazy">
+                </div>
+                <div class="next-project-info">
+                    <h3>Data-Driven Marketing</h3>
+                    <p>Optimized foundation e-commerce with PDP redesign & chatbot development, reducing color-matching inquiries by 55.74%.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+    <!-- 외부 스크립트 사용 -->
+    <script src="../carousel.js"></script>
+    <script src="../app.js" defer></script>
+</body>
+</html> 
